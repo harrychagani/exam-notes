@@ -37,3 +37,16 @@ A customer service representative successfully resolves a complaint 30% of the t
 What is the probability that they handle 6 unsuccessful complaints before resolving 4 successfully?
 p = 0.30, n = 4, k = 6
 prob = nbinom.pmf(k,n,p)
+........................................
+IQ scores are normally distributed with a mean of 100 and a standard deviation of 15. What percentage of people have an IQ between 85 and 115?
+p_lower = norm.cdf(85, loc=mean, scale=std_dev)
+p_upper = norm.cdf(115, loc=mean, scale=std_dev)
+percentage = (p_upper - p_lower)
+......................................
+ the probability of success in a trial is 0.2, what is the probability that the 4th success occurs on the 10th trial?
+k = 10
+n = 4
+p = 0.2
+prob = nbinom.pmf(k-n,n,p)
+round(prob,4)
+................................
