@@ -1,75 +1,9 @@
-## 📝 Python Exam – Questions and Answers
+The Normal distribution (also called the Gaussian distribution) is used for modeling continuous data that is symmetrically distributed around a mean. It forms the well-known bell curve. It’s used for things like IQ scores, heights, or test scores. Key parameters are the mean (μ) and standard deviation (σ). You use it when you're calculating the probability of a value falling within a range.
 
-**Q1:** Write a function named `even_squared` that takes in a list of integers, squares each even number, and returns the sum of the squared even numbers. If there are no even numbers, return 0. If the list is empty, raise an `AssertionError`. If a non-integer is present, raise a `TypeError`.  
-```python
-def even_squared(lst):
-    assert lst, "List is empty"
-    if not all(isinstance(x, int) for x in lst):
-        raise TypeError("All elements must be integers")
-    even_squares = [x**2 for x in lst if x % 2 == 0]
-    return sum(even_squares) if even_squares else 0
-```
+The Binomial distribution models the number of successes in a fixed number of independent trials, where each trial has two outcomes (success/failure) and the same probability of success. Use this when you're answering questions like, “What’s the probability of exactly 3 students passing a quiz out of 10?” Its key parameters are the number of trials (n) and probability of success (p).
 
-**Q2:** Given the classes A(D), Z(K), K(D), G(A), which statement is not true? ✅ `K is a child class of A`
+The Geometric distribution is used when you want to know how many trials it takes to get the first success. It's the only distribution where the trials can keep going forever until the first success happens. An example would be, “What’s the probability that the first head appears on the 4th coin toss?” The only parameter is p, the probability of success on each trial.
 
-**Q3:** Create a new column `description_count` that counts words in the `description` column.  
-```python
-rent['description_count'] = rent['description'].apply(lambda x: len(str(x).split()))
-```
+The Poisson distribution models the number of times an event happens in a fixed interval of time or space, especially when the events are rare and occur independently. For instance, “How many calls does a call center get per hour?” It has one parameter: λ (lambda), which is the average number of events per interval.
 
-**Q4:** Insert only numeric columns of the bulldozer dataset into SQLite and retrieve the first 5 rows.  
-```python
-import sqlite3
-conn = sqlite3.connect('auction.db')
-bdims_numeric = bdims.select_dtypes(include='number')
-bdims_numeric.to_sql('bulldozer', conn, if_exists='replace', index=False)
-conn.commit()
-result = pd.read_sql_query("SELECT * FROM bulldozer LIMIT 5;", conn)
-conn.close()
-```
-
-**Q5:** Proper f-string implementation:  
-```python
-f"The values of the variables are var1={var1} and var2={var2}."
-```
-
-**Q6:** Dot product result from seeded arrays → ✅ `-65748`
-
-**Q7:** Matrix multiplication value at position [6, 28] using seed 68 → ✅ `8.406180491545276`
-
-**Q8:** Which is NOT iterable? ✅ `float`
-
-**Q9:** Define a class `Restaurant` with attributes, class method, and make it iterable.  
-```python
-class Restaurant:
-    owner = "Unknown"
-
-    def __init__(self, name, tel_number):
-        self.name = name
-        self.tel_number = tel_number
-
-    @classmethod
-    def update_owner(cls, new_owner):
-        cls.owner = new_owner
-
-    def __iter__(self):
-        return iter([self.name, self.tel_number])
-```
-
-**Q10:** Output of AND → NOR logic gates for 2 input sets → ✅ `[False, True]`
-
-**Q11:** A `while` loop is useful when: ✅ `indefinite number of iterations`
-
-**Q12:** To pass dictionary `a` as keyword arguments → ✅ `**a`
-
-**Q13:** Access `"Avalon Cafe and Bakery"` from `json_data` →  
-```python
-json_data['restaurants'][0]['name']
-```
-
-**Q14:** Select `-14` from list `x` using positive indexing → ✅ `x[4][1]`
-
-**Q15:** Create `building_id_count` that maps building ID to count →  
-```python
-rent['building_id_count'] = rent['building_id'].map(rent['building_id'].value_counts())
-```
+The Negative Binomial distribution is used when you're interested in how many trials are needed to achieve a certain number of successes, not just the first one like in geometric. For example, “What’s the probability that I score my 5th goal on the 12th shot?” It requires two parameters: the number of successes (r) and probability of success (p).
