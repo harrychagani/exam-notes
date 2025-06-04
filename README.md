@@ -1,4 +1,12 @@
+from scipy.stats import norm
 
+# Confidence level
+confidence = 0.95
+alpha = 1 - confidence
+
+# Compute Z-score
+z_score = norm.ppf(1 - alpha/2)
+print(round(z_score, 4))
 ...............................................
 Using the confidence interval approach:
 n = 1001, p_hat = 0.11, ME = 0.03
