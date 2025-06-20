@@ -14,3 +14,11 @@ model.fit(X, y)
 
 # Step 3: Output the OOB score
 print("Out-of-Bag R^2 Score:", model.oob_score_)
+
+####FOR REGRESSOR
+model = RandomForestRegressor(n_estimators=85, random_state=186)
+model.fit(X, y)
+
+# Predict
+predictions = model.predict(X_test)
+print(predictions)
