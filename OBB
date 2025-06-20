@@ -1,0 +1,16 @@
+import numpy as np
+from sklearn.ensemble import RandomForestRegressor
+
+X = 
+y = 
+
+model = RandomForestRegressor(
+    n_estimators=58,
+    random_state=159,
+    oob_score=True,
+    bootstrap=True
+)
+model.fit(X, y)
+
+# Step 3: Output the OOB score
+print("Out-of-Bag R^2 Score:", model.oob_score_)
