@@ -15,13 +15,13 @@ X_test =
 
 clf = DecisionTreeClassifier(random_state=178)
 clf.fit(X, y)
-predictions = clf.predict(X_test)
+ = clf.(X_test)
 print(predictions)
 
 #### NP SCALING
 import numpy as np
 import random
-rng = np.random.default_rng(30)
+rng = np.default_rng(30)
 X = rng.integers(0, 149, size=(77, 95))
 amax = np.amax(X)
 Y = X / amax
