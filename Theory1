@@ -1,0 +1,86 @@
+Question: What happens to the critical region if the significance level increases? It becomes larger.
+
+Question: What does the "power" of a hypothesis test represent? Probability of correctly rejecting a false null hypothesis.
+Question: What is the significance level (α)? The probability of rejecting H0 when it is true.
+Question: In hypothesis testing, the "effect size" measures? The magnitude of the difference between groups.
+Question: In hypothesis testing, what does "power" measure? Probability of correctly rejecting H0.
+Question: If you decrease the significance level (α) while keeping everything else the same, what happens to power? Power decreases.
+Question: In hypothesis testing, if you increase α, what happens to β?It decreases.
+Question: In hypothesis testing, which of these is NOT true?A p-value above α leads to rejecting H0.
+Question: What happens to the t-distribution as degrees of freedom increase? It approaches normal distribution.
+Question: The term "statistical significance" means? Results are unlikely under H0.
+Question: A test with low power is more likely to? Make a Type II error.
+Question: Which of the following will NOT affect the power of a hypothesis test? The color of the test report.
+Question: The p-value depends on:Sample data.
+Question: Which test would you use to compare the means of two independent samples? Independent samples t-test.
+Question: Two hospitals report their recovery rates for a certain surgery. Hospital A has a 78% recovery rate (n=150), and Hospital B has an 85% recovery rate (n=180). What is the null hypothesis? The recovery rates are the same.
+Question: Which distribution does the Chi-Square test statistic follow?Chi-Square.
+Question: What does the Chi-Square test of independence assess? Association between two categorical variables.
+Question: A Chi-Square statistic of 0 means? Observed equals expected.
+Question: Chi-Square test statistics are always?  Positive.
+Question: In a Chi-Square test, which value is compared to the critical value? Chi-Square test statistic.
+Question: The larger the difference between observed and expected frequencies:
+ The larger the Chi-Square value.
+Question: Which of these is an example where Chi-Square is appropriate?
+ Comparing proportions of males and females across departments.
+Question: A paired t-test is also known as:
+ A dependent samples t-test.
+Question: The paired t-test is best used in which of the following scenarios?
+ Measuring blood pressure before and after a drug is administered.
+Question: Which of the following statements about t-distributions is TRUE?
+ All of the above.
+Question: A paired t-test is particularly useful when:
+ The same subjects are measured twice under different conditions.
+Question: If a paired t-test produces a p-value of 0.08, what can we conclude at a 5% significance level?
+ The null hypothesis is not rejected.
+Question: A paired t-test is appropriate when:
+ Data is collected from the same subjects before and after treatment.
+Question: When comparing two proportions, what does the pooled proportion (p^) represent?
+ The proportion of the combined groups.
+Question: Which value indicates stronger evidence against the null hypothesis in a Chi-Square test?
+ Larger Chi-Square statistic.
+Question: What is the null hypothesis in a Chi-Square test of independence?
+ Variables are independent.
+Question: When would you use a Chi-Square goodness-of-fit test?
+ To compare observed and expected frequencies.
+Question: The Chi-Square distribution becomes more symmetrical with:
+ More degrees of freedom.
+Question: If you use a one-tailed test instead of a two-tailed test (with the same α), the power will usually:
+ Increase.
+Question: If you want to increase the power of your test, what's a good strategy?
+ Increase the sample size.
+Question: If the p-value is 0.01 and α=0.05, the power is:
+ Unrelated to p-value.
+Question: The power of a hypothesis test is:
+ 1−β.
+Question: Which statement is TRUE?
+ A smaller p-value provides stronger evidence against H0.
+Question: You are designing an experiment and need high power. You should:
+ Reduce variability in your measurements.
+Question: What type of error increases when you decrease α?
+ Type II error.
+Question: As the effect size increases, the power of the test will:
+ Increase.
+Question: The larger the standard deviation, the ______ the test statistic in a t-test.
+ Smaller.
+Question: In hypothesis testing, what does β represent?
+ Type II error.
+Question: An effect size describes:
+ The size of the difference you are testing for.
+Question: If the population standard deviation is known and the sample size is large, which test should be used?
+ Z-test.
+Question: Which of the following best describes an alternative hypothesis?
+ A statement contradicting H0.
+Question: If the power of a test is 0.9, the probability of a Type II error is:
+ 0.1.
+Question: A Type II error occurs when you:
+ Fail to reject H0 when Ha is true.
+Question: What does the Central Limit Theorem tell us?
+ The sampling distribution of the mean approaches normality as sample size increases.
+Question: When should you use the t-distribution instead of the normal distribution for hypothesis testing?
+ When the population standard deviation is unknown and the sample size is small.
+Question: Which of the following is NOT a condition for using a t-test?
+ The population variance is known.
+Question: A company tests a new ad campaign... What statistical test should be used?
+ Two sample z-test for proportions.
+
