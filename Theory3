@@ -1,0 +1,21 @@
+from scipy.stats import norm
+
+# Given values
+std_dev = 4          # standard deviation
+effect = 2           # detectable difference
+alpha = 0.05         # significance level
+power = 0.80         # desired power
+
+# Get Z-scores
+z_alpha = norm.ppf(1 - alpha/2)  # two-tailed
+z_beta = norm.ppf(power)
+
+# Sample size formula
+numerator = (z_alpha + z_beta) * std_dev
+n = (numerator / effect) ** 2
+
+# Round up to nearest whole number
+n = int(n) + 1
+
+print("Minimum sample size per group:", n)
+
