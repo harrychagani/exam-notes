@@ -1,1 +1,32 @@
+import math
+from scipy.stats import norm
 
+# Step 1: Define given values
+std_dev = 12          # standard deviation
+n = 100               # sample size per group
+alpha = 0.05          # significance level
+effect_size = 3       # true difference in means
+
+# Step 2: Calculate Standard Error
+SE = math.sqrt(2 * (std_dev**2) / n)
+print("Standard Error (SE):", round(SE, 4))
+
+# Step 3: Critical values for two-tailed test
+z_alpha_over_2 = norm.ppf(1 - alpha / 2)
+critical_value = z_alpha_over_2 * SE
+print("Z (alpha/2):", round(z_alpha_over_2, 4))
+print("Critical Values: ±", round(critical_value, 4))
+
+# Step 4: Z-scores under alternative hypothesis (true diff = 3 mmHg)
+z_left = (-critical_value - effect_size) / SE
+z_right = (critical_value - effect_size) / SE
+print("Left-tail Z-score:", round(z_left, 4))
+print("Right-tail Z-score:", round(z_right, 4))
+
+# Step 5: Calculate power
+power_left = norm.cdf(z_left)
+power_right = 1 - norm.cdf(z_right)
+power = power_left + power_right
+print("Power Left Tail:", round(power_left, 4))
+print("Power Right Tail:", round(power_right, 4))
+print("Total Power of the Test:", round(power, 4))
