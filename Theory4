@@ -1,0 +1,41 @@
+# Blood pressure before and after treatment
+before = [65, 70, 68, 72, 66]
+after  = [70, 75, 74, 78, 72]
+
+# Step 1: Calculate differences (Before - After)
+differences = [b - a for b, a in zip(before, after)]
+print("Differences:", differences)
+
+# Step 2: Mean and sample size
+n = len(differences)
+mean_diff = sum(differences) / n
+print("Sample size (n):", n)
+print("Mean difference:", round(mean_diff, 4))
+
+squared_diffs = [(d - mean_diff)**2 for d in differences]
+std_dev = (sum(squared_diffs) / (n - 1)) ** 0.5
+print("Standard Deviation:", round(std_dev, 4))
+
+# Step 4: Standard Error
+SE = std_dev / (n ** 0.5)
+print("Standard Error (SE):", round(SE, 4))
+
+# Step 5: T-statistic
+t_statistic = mean_diff / SE
+print("T-statistic:", round(t_statistic, 4))
+
+from scipy.stats import t
+
+# Step 6: P-value (two-tailed)
+df = n - 1
+p_value = 2 * (1 - t.cdf(abs(t_statistic), df))
+print("Degrees of Freedom:", df)
+print("P-value:", round(p_value, 4))
+
+# Step 7: 95% Confidence Interval
+t_critical = t.ppf(1 - 0.05 / 2, df)
+ME = t_critical * SE
+CI_lower = mean_diff - ME
+CI_upper = mean_diff + ME
+print("Margin of Error:", round(ME, 4))
+print("95% Confidence Interval: ({:.2f}, {:.2f})".format(CI_lower, CI_upper))
