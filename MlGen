@@ -1,0 +1,17 @@
+If data3.sample(n=3256, random_state=410) is your data and you apply mapping on 'genhlth' feature like
+{'good':3, 'very good':17, 'excellent':26, 'fair':35, 'poor':44}
+find out the value at index 1304 of the sample and match it with the given options.
+Answer:
+import pandas as pd
+
+# Assume data3 is already loaded DataFrame
+# Step 1: Sample the data
+sampled_data = data3.sample(n=3256, random_state=410)
+
+# Step 2: Apply the mapping to 'genhlth' column
+mapping = {'good': 3, 'very good': 17, 'excellent': 26, 'fair': 35, 'poor': 44}
+sampled_data['genhlth_mapped'] = sampled_data['genhlth'].map(mapping)
+
+# Step 3: Get the value at index 1304 (of the sampled dataframe)
+value = sampled_data.iloc[1304]['genhlth_mapped']
+print("Mapped value at index 1304:", value)
