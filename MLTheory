@@ -1,0 +1,46 @@
+•  We say a model is able to generalize if
+: it predicts well on new, unseen data
+•  The test data set is used to:
+: estimate how well a model will generalize to unseen, real-world data
+•  What does the following code calculate: np.sum((y - y_hat)**2) / n
+: mse
+•  If you have a Pandas dataframe df and would like to create the feature array to train a machine learning algorithm, you would use:
+: df.drop('target', axis=1)
+•  In kNN regression, we look at the k neighbours and:
+: average the k target values to predict the value
+•  What values can R² take on?
+: -inf to 1
+•  We set the random_state in train_test_split() in order to:
+: ensure we always get the same data splits
+•  Feature importances measure the drop in the model's:
+: validation set accuracy when each feature is removed/randomized
+•  The training data set is used to:
+: used to learn the values of the network parameters that minimize the error
+•  Memorization of the training data will:
+: work well for the training data but not be able to make predictions for any other data
+•  For a machine learning problem, there are two things we need to verify:
+: that the model fits the training data well and that the model generalizes
+•  If we would like to find out how often our classification model predicts false positives and false negatives, we could:
+: compute the confusion matrix
+•  Using all or some of the test data to train the model will:
+: will overestimate how well your model will predict when using new, unseen data
+•  The central problem of machine learning is to build a system that:
+: is accurate without being overly-specific to the training data
+•  The objective of a machine learning classifier is to:
+: detect the class of a newly given sample
+•  The validation data set is used to:
+: used to choose between different values of hyperparameters for a network
+What is the input range of sigmoid? •  The input range of the sigmoid function is all real numbers, i.e., (−∞,∞).
+What is the primary goal of regression analysis in machine learning? 
+•  The primary goal of regression analysis in machine learning is to predict a continuous target variable based on input features.
+Which technique is used to handle categorical variables in classification algorithm? 
+•  Techniques like one-hot encoding or label encoding are used to handle categorical variables in classification algorithms.
+Which of the following model is used for classification? 
+•  Models like Logistic Regression, Support Vector Machines (SVMs), Decision Trees, Random Forests, and K-Nearest Neighbors (KNN) are used for classification.
+For any machine learning endeavour, the best starting point is to: 
+•  Clearly define the problem, understand the data, and establish a baseline.
+What is the output range of sigmoid function? (On y-axis) •  The output range of the sigmoid function is between 0 and 1, i.e., (0,1).
+In binary classification, how many classes does the output variable have? •  In binary classification, the output variable has two classes.
+What is the purpose of a confusion matrix in classification? The purpose of a confusion matrix in classification is to evaluate the performance of a classification model by summarizing the true positive, true negative, false positive, and false negative predictions.
+Given the NumPy array ary = np.array([[1, 2, 3], [4, 5, 6]]), what does ary[1, 1] return? ary[1, 1] returns the value at the second row (index 1) and second column (index 1), which is 5.
+ 
