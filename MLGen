@@ -1,0 +1,31 @@
+Questions:If data3.sample(n=3256, random_state=410) is your data and you apply mapping on 'genhlth' feature like
+{'good':3, 'very good':17, 'excellent':26, 'fair':35, 'poor':44}
+find out the value at index 1304 of the sample and match it with the given options
+
+import pandas as pd
+# Assume data3 is already loaded DataFrame
+# Step 1: Sample the data
+sampled_data = data3.sample(n=3256, random_state=410)
+# Step 2: Apply the mapping to 'genhlth' column
+mapping = {'good': 3, 'very good': 17, 'excellent': 26, 'fair': 35, 'poor': 44}
+sampled_data['genhlth_mapped'] = sampled_data['genhlth'].map(mapping)
+# Step 3: Get the value at index 1304 (of the sampled dataframe)
+value = sampled_data.iloc[1304]['genhlth_mapped']
+print("Mapped value at index 1304:", value)
+
+Question:Sample 4498 rows from data3 with random_state=100, apply one-hot encoding to 'genhlth', and find the data at row index 1066 (after sampling).
+import pandas as pd
+from sklearn.preprocessing import OneHotEncoder
+# Step 1: Sample the data
+sampled_data = data3.sample(n=4498, random_state=100).reset_index(drop=True)
+# Step 2: Extract the 'genhlth' column
+genhlth_col = sampled_data[['genhlth']]  # Must be 2D for sklearn
+# Step 3: Apply OneHotEncoder
+encoder = OneHotEncoder(sparse=False, handle_unknown='ignore')
+encoded_array = encoder.fit_transform(genhlth_col)
+# Step 4: Create a DataFrame with encoded columns
+encoded_df = pd.DataFrame(encoded_array, columns=encoder.get_feature_names_out(['genhlth']))
+# Step 5: Combine with other columns (optional)
+final_df = pd.concat([sampled_data.reset_index(drop=True).drop(columns=['genhlth']), encoded_df], axis=1)
+# Step 6: View the encoded row at index 1066
+print(final_df.iloc[1066])
