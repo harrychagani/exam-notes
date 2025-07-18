@@ -1,18 +1,38 @@
 import numpy as np
 from sklearn.linear_model import LogisticRegression
-
-# Training data (X and y)
 X = 
 y = 
-
-# Test data
 X_test = 
-
-# Train logistic regression model
 model = LogisticRegression(max_iter=1000)
 model.fit(X, y)
-
-# Predict on test set
 predictions = model.predict(X_test)
 print("Predictions:", predictions)
 
+import numpy as np
+from sklearn.tree import DecisionTreeClassifier
+# Step 1: Prepare X and y
+X = 
+y =
+X_test = 
+clf = DecisionTreeClassifier(random_state=157)
+clf.fit(X, y)
+predictions = clf.predict(X_test)
+print("Predictions:", predictions)
+
+import numpy as np
+from sklearn.ensemble import RandomForestRegressor
+X = 
+y = 
+model = RandomForestRegressor(
+    n_estimators=58,
+    random_state=159,
+    oob_score=True,
+    bootstrap=True
+)
+model.fit(X, y)
+X_test = np.array([[2, 3], [6, 7]])
+predictions = model.predict(X_test)
+
+# Print predictions and OOB score
+print("Predictions:", predictions)
+print("OOB Score:", model.oob_score_)
