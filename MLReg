@@ -1,0 +1,18 @@
+import numpy as np
+from sklearn.linear_model import LogisticRegression
+
+# Training data (X and y)
+X = 
+y = 
+
+# Test data
+X_test = 
+
+# Train logistic regression model
+model = LogisticRegression(max_iter=1000)
+model.fit(X, y)
+
+# Predict on test set
+predictions = model.predict(X_test)
+print("Predictions:", predictions)
+
