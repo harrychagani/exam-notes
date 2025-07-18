@@ -1,0 +1,7 @@
+from sklearn.metrics import confusion_matrix
+import numpy as np
+
+y = 
+preds = 
+
+confusion_matrix(y, preds)
