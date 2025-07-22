@@ -28,6 +28,8 @@
 : is accurate without being overly-specific to the training data
 •  The objective of a machine learning classifier is to:
 : detect the class of a newly given sample
+• According to the textbook authors, machine learning could be described as a sensible combination of:
+: 	data structures, algorithms, and statistics 
 •  The validation data set is used to:
 : used to choose between different values of hyperparameters for a network
 What is the input range of sigmoid? •  The input range of the sigmoid function is all real numbers, i.e., (−∞,∞).
@@ -38,7 +40,7 @@ Which technique is used to handle categorical variables in classification algori
 Which of the following model is used for classification? 
 •  Models like Logistic Regression, Support Vector Machines (SVMs), Decision Trees, Random Forests, and K-Nearest Neighbors (KNN) are used for classification.
 For any machine learning endeavour, the best starting point is to: 
-•  Clearly define the problem, understand the data, and establish a baseline.
+•  clearly define the problem you are trying to solve
 What is the output range of sigmoid function? (On y-axis) •  The output range of the sigmoid function is between 0 and 1, i.e., (0,1).
 In binary classification, how many classes does the output variable have? •  In binary classification, the output variable has two classes.
 What is the purpose of a confusion matrix in classification? The purpose of a confusion matrix in classification is to evaluate the performance of a classification model by summarizing the true positive, true negative, false positive, and false negative predictions.
