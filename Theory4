@@ -1,0 +1,36 @@
+Week 10 (Regression)
+•	Q: Which of the following is NOT an assumption of multiple linear regression?
+A: Multicollinearity
+•	Q: When adding a new predictor to a regression model, the adjusted R² decreases. What does this imply?
+A: The new variable didn’t help and may harm model performance
+•	Q: In a multiple regression model, multicollinearity refers to:
+A: High correlation among independent variables
+•	Q: If R² = 0.80 in a multiple regression model, what does this mean?
+A: 80% of the variation in the outcome is explained by the predictors
+•	Q: In multiple regression, what is 'dummy coding' used for?
+A: Including categorical variables
+•	Q: When interpreting regression coefficients, what does it mean to 'control for other variables'?
+A: Hold other predictors constant while assessing one’s effect
+•	Q: Which of the following is a possible consequence of multicollinearity?
+A: Increased p-values
+•	Q: The residuals in multiple regression should ideally be:
+A: Randomly distributed with zero mean
+
+Week 11 (TimeSeries)
+•	Q: What is the long-term upward or downward movement in a time series called?
+A: Trend
+•	Q: When the series has a quadratic trend, it is:
+A: Non-linear
+•	Q: The main use of a time series model is to:
+A: Predict future values
+•	Q: Seasonality in data can be detected using:
+A: Time series plot
+•	Q: What type of time series shows regular fluctuations in specific periods like months or quarters?
+A: Seasonality
+•	Q: Which of these is not a component of time series?
+A: Stationarity
+•	Q: Which of these models is not typically used in time series analysis?
+A: K-means
+•	Q: Which of the following models involves past forecast errors?
+A: MA
+
