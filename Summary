@@ -1,0 +1,43 @@
+Advanced Statistics Exam Topic Summaries
+Week 11 - Multiple Regression
+- Multiple regression involves predicting a dependent variable using multiple independent variables.
+- High R² indicates a good fit to the training data but not necessarily good generalization (may indicate overfitting).
+- Adjusted R² is preferred when comparing models, as it adjusts for the number of predictors.
+- Multicollinearity (high correlation among predictors) inflates standard errors and reduces interpretability.
+- Variable selection methods like backward elimination help identify the most relevant predictors.
+- Dummy coding is used to include categorical variables.
+- Standardized coefficients (beta weights) allow comparison of the relative importance of predictors.
+- Residuals should be randomly distributed with a mean of zero.
+- Influential points can be detected using Cook’s distance.
+Week 9 - One-Way ANOVA
+- One-way ANOVA tests whether there are statistically significant differences between the means of three or more independent groups.
+- The null hypothesis assumes all group means are equal.
+- A large F-statistic suggests that at least one group mean differs significantly.
+- Assumptions include: normality, equal variances across groups, and independent observations.
+- Violating assumptions (e.g., unequal variances) invalidates results.
+- If p > 0.05, we fail to reject the null hypothesis (no significant difference between groups).
+Week 8 - Statistical Power and Effect Size
+- Power is the probability of correctly rejecting a false null hypothesis (1 - β).
+- A high power (e.g., 0.80 or 80%) reduces the risk of Type II errors.
+- Power increases with sample size, larger effect sizes, and higher α.
+- Type I error (α): rejecting a true null hypothesis.
+- Type II error (β): failing to reject a false null hypothesis.
+- Lowering α increases the chance of a Type II error.
+- Effect size quantifies the magnitude of a difference, independent of sample size.
+Week 7 - Paired and Independent t-tests
+- Paired t-tests compare means from the same group at different times (dependent samples).
+- Independent t-tests compare means from two different groups.
+- t-tests assume normality and, for independent samples, equal variances.
+- In paired t-tests, differences are analyzed as a single sample.
+- Use t-distribution when population standard deviation is unknown and sample size is small.
+- Confidence intervals are affected by standard deviation, sample size, and confidence level.
+- p-value < α means reject the null hypothesis (significant difference exists).
+Week 6 - Chi-Square Tests
+- Chi-Square tests are used for categorical data to assess goodness-of-fit or test independence between variables.
+- Chi-Square test of independence checks if two categorical variables are related.
+- Chi-Square goodness-of-fit compares observed and expected frequencies for one categorical variable.
+- Assumes large enough sample size and expected frequencies.
+- Chi-Square statistics are always positive and increase with larger differences between observed and expected values.
+- More degrees of freedom make the Chi-Square distribution more symmetric.
+- Cannot be used for continuous data.
+- Test statistic is compared to a critical value to decide on rejecting the null hypothesis.
