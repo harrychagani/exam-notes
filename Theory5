@@ -1,23 +1,3 @@
-Week 7 (Ttest)
-•	Q: Which assumption is NOT required for a paired t-test?
-A: The samples are independent
-•	Q: If a paired t-test produces a p-value of 0.08, what can we conclude at a 5% significance level?
-A: The null hypothesis is not rejected
-•	Q: Which of the following affects the width of a confidence interval in a paired t-test?
-A: All of the above
-•	Q: In a two-tailed paired t-test, the rejection region is in:
-A: Both tails
-•	Q: A paired t-test is particularly useful when:
-A: The same subjects are measured twice under different conditions
-•	Q: When should you use the t-distribution instead of the normal distribution for hypothesis testing?
-A: When the population standard deviation is unknown and the sample size is small
-•	Q: Which of the following statements about t-distributions is TRUE?
-A: All of the above
-•	Q: A one-sample t-test is equivalent to a paired t-test when:
-A: The second sample is artificially created by subtracting a constant from the first sample
-•	Q: A paired t-test is appropriate when:
-A: Data is collected from the same subjects before and after treatment
-
 (POWER)
 •	Q: A test has low power because the effect size is very small. What is the best way to improve power in this case?
 A: Increase the sample size
@@ -37,6 +17,7 @@ A: They have a 90% chance of detecting a true effect
 A: It is unlikely to detect a true effect
 •	Q: What is the purpose of using standardized coefficients (beta weights)?
 A: Compare the relative importance of predictors
+
 Week 9 (ANOVA)
 •	Q: Which of the following is an assumption of one-way ANOVA?
 A: Variances across groups should be approximately equal
