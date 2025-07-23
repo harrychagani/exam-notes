@@ -1,0 +1,37 @@
+Chi-Square
+•	Q: A Chi-Square statistic of 0 means:
+A: Observed equals expected
+•	Q: The Chi-Square test is most commonly used for which type of data?
+A: Categorical
+•	Q: The Chi-Square distribution becomes more symmetrical with:
+A: More degrees of freedom
+•	Q: Chi-Square test for homogeneity compares:
+A: Proportions across different populations
+•	Q: Chi-Square tests cannot:
+A: Handle continuous variables
+
+General/Other
+•	Q: If two predictors are highly correlated, what happens?
+A: Standard errors of coefficients increase
+•	Q: Which of the following increases when an irrelevant predictor is added to the model?
+A: R-squared
+•	Q: Backward elimination is a method of:
+A: Variable selection
+•	Q: Which of these diagnostics is most appropriate to detect influential observations?
+A: Cook’s distance
+•	Q: A medical trial compares two treatments for cancer. The researchers want to detect a very small improvement in survival rates. What should they do?
+A: Increase the sample size
+•	Q: A new diet plan claims to reduce weight by 5 kg. The study fails to detect a difference, but the diet does work. What happened?
+A: Type II error
+•	Q: Which of the following is NOT a condition for using a t-test?
+A: The population variance is known
+•	Q: Which technique can make a non-stationary series stationary?
+A: Differencing
+•	Q: You create a model to predict student scores using study time, attendance, and previous GPA. Which is the response variable?
+A: Student scores
+•	Q: A researcher wants to test if three fertilizers result in different plant heights. What is the null hypothesis?
+A: The mean plant heights for all fertilizers are equal
+•	Q: Seasonal data patterns repeat:
+A: Over known periods
+•	Q: A model has high R² but performs poorly on new data. What is this an example of?
+A: Overfitting
