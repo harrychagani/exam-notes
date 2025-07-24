@@ -1,0 +1,47 @@
+import warnings
+warnings.filterwarnings("ignore")
+import numpy as np
+import pandas as pd
+import io
+import requests
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import r2_score
+from sklearn.preprocessing import OneHotEncoder
+# Step 1: Load dataset
+df_url = 'https://raw.githubusercontent.com/akmand/datasets/main/california_housing.csv'
+url_content = requests.get(df_url, verify=False).content
+data1 = pd.read_csv(io.StringIO(url_content.decode('utf-8')))
+# Step 2: Take a sample of 500 rows
+sample = data1.sample(n=500, random_state=56)
+# Step 3: Select features and target
+features = ['longitude', 'latitude', 'housing_median_age', 'total_rooms', 'total_bedrooms', 'ocean_proximity']
+target = 'median_house_value'
+X = sample[features].copy()
+y = sample[target].copy()
+# Step 4: Fill missing values with mean
+X['total_bedrooms'] = X['total_bedrooms'].fillna(X['total_bedrooms'].mean())
+
+# Step 5: One-hot encode categorical variable
+encoder = OneHotEncoder(sparse_output=False, handle_unknown='ignore')
+encoded = encoder.fit_transform(X[['ocean_proximity']])
+encoded_df = pd.DataFrame(encoded, columns=encoder.get_feature_names_out(['ocean_proximity']))
+# Combine encoded data with numerical features
+X = pd.concat([X.drop(columns=['ocean_proximity']).reset_index(drop=True),
+               encoded_df.reset_index(drop=True)], axis=1)
+# Step 6: Train-test split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.13, random_state=12)
+# Step 7: Train regression model
+model = DecisionTreeRegressor(max_depth=10)
+model.fit(X_train, y_train)
+# Step 8: Calculate accuracy
+train_r2 = r2_score(y_train, model.predict(X_train))
+test_r2 = r2_score(y_test, model.predict(X_test))
+print(f"Train R² Score: {train_r2:.4f}")
+print(f"Test R² Score: {test_r2:.4f}")
+
+# Step 9: Most important feature
+importances = model.feature_importances_
+feature_names = X.columns
+most_important_idx = np.argmax(np.abs(importances))
+print(f"Most influential feature: '{feature_names[most_important_idx]}' with importance {importances[most_important_idx]:.4f}")
