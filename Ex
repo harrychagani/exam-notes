@@ -1,0 +1,9 @@
+sampled_data = data1.sample(n=150, random_state=37)
+# 2. Extract numeric part from 'Weight' column (remove 'lbs')
+sampled_data['Weight'] = sampled_data['Weight'].str.extract(r'(\d+)').astype(float)
+# 3. Drop missing values from 'Weight'
+sampled_data = sampled_data.dropna(subset=['Weight'])
+# 4. Calculate mean weight
+mean_weight = sampled_data['Weight'].mean()
+print("Mean Weight:", round(mean_weight, 2))
+
