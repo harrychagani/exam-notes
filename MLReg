@@ -36,3 +36,7 @@ predictions = model.predict(X_test)
 # Print predictions and OOB score
 print("Predictions:", predictions)
 print("OOB Score:", model.oob_score_)
+#Another method
+reg = RandomForestRegressor(random_state=42, n_estimators=100)
+reg.fit(X, y)
+preds = reg.predict(X_test)
