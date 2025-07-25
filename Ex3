@@ -1,0 +1,32 @@
+import numpy as np
+# Actual and predicted labels
+actual = np.array([2, 2, 1, 2, 1, 2, 0, 2, 0, 1, 0, 0, 2, 0, 1, 2, 1, 2, 1, 2])
+predicted = np.array([2, 0, 1, 0, 2, 2, 0, 2, 0, 1, 2, 1, 1, 2, 2, 2, 0, 1, 0, 2])
+# False positives for class 1: predicted is 1 but actual is not 1
+false_positives = np.sum((predicted == 1) & (actual != 1))
+print("False positives for class 1 (Mild Illness):", false_positives)
+
+import pandas as pd
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+# Assuming data3 is already loaded
+# Example: data3 = pd.read_csv('your_file.csv')
+# Select features and target
+features = ['wtdesire', 'height', 'weight', 'age']
+target = 'hlthplan'
+# Drop rows with missing values in selected columns
+data3_clean = data3[features + [target]].dropna()
+# Split into train and test sets
+X = data3_clean[features]
+y = data3_clean[target]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.10, random_state=193)
+# Train Random Forest model
+rf_model = RandomForestClassifier(
+    n_estimators=60,
+    max_depth=5,
+    random_state=193,
+    oob_score=True
+)
+rf_model.fit(X_train, y_train)
+# Print OOB score
+print("OOB Score:", round(rf_model.oob_score_, 4))
