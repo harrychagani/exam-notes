@@ -1,3 +1,4 @@
+If data1.sample(n=150, random_state=37) is your dataset and extract the numeric part of the 'Weight' column (e.g. from '208lbs' --> 208)and drop missing values? What is the mean weight of the given data samples?
 sampled_data = data1.sample(n=150, random_state=37)
 # 2. Extract numeric part from 'Weight' column (remove 'lbs')
 sampled_data['Weight'] = sampled_data['Weight'].str.extract(r'(\d+)').astype(float)
@@ -7,3 +8,27 @@ sampled_data = sampled_data.dropna(subset=['Weight'])
 mean_weight = sampled_data['Weight'].mean()
 print("Mean Weight:", round(mean_weight, 2))
 
+df = data1.sample(n=144, random_state=15).copy()
+# Step 2: Clean up missing and inconsistent values
+df['Married'] = df['Married'].replace(['None', '', 'N/A'], 'Un Known')
+df['Married'] = df['Married'].replace(['Yes', 'Y'], 'Y')
+df['Married'] = df['Married'].replace(['Np', 'N'], 'N')
+# Step 3: Count values
+married_counts = df['Married'].value_counts()
+print(married_counts)
+
+if data['sex'].dtype == 'object':
+    le = LabelEncoder()
+    data['sex'] = le.fit_transform(data['sex'])
+# Drop rows with missing values
+data = data.dropna()
+# Define features and target
+X = data.drop(columns=['sex'])
+y = data['sex']
+# Create and train the Random Forest Classifier
+model = RandomForestClassifier(n_estimators=92, random_state=15)
+model.fit(X, y)
+# Get feature importances
+importances = pd.Series(model.feature_importances_, index=X.columns)
+# Show importance of 'wgt'
+print("Feature importance for 'wgt':", importances['wgt'])
