@@ -1,0 +1,2 @@
+In K-mean clustering, what is the purpose of the silhoutte score? To evaluate the qualuty of clustering solution
+What happens during K means algorithm initialization? Random cluster centers are selected
